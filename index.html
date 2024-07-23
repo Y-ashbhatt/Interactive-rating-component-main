@@ -4,65 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-
+    
     <title>Frontend Mentor | Interactive rating component</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <!-- Rating state start -->
-    <main class="card">
-      <section class="rating">
-        <img
-          src="./images/icon-star.svg"
-          class="rating_image"
-          alt="icon-star"
-        />
-        <h1 class="rating_heading">How did we do?</h1>
-        <p class="rating_description">
-          Please let us know how we did with your support request. All feedback
-          is appreciated to help us improve our offering!
-        </p>
+    <main class="container">
+      <div class="card">
+        <section class="rating_card" id="rating_card">
+          <div class="rating_image">
+            <img src="./images/icon-star.svg" alt="icon-star" />
+          </div>
+          <h1 class="rating_heading">How did we do?</h1>
+          <p class="rating_description">
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+          <div class="ratings_btn">
+            <button class="rating_btn" id="btn-1" value="1">1</button>
+            <button class="rating_btn" id="btn-2" value="2">2</button>
+            <button class="rating_btn" id="btn-3" value="3">3</button>
+            <button class="rating_btn" id="btn-4" value="4">4</button>
+            <button class="rating_btn" id="btn-5" value="5">5</button>
+          </div>
+          <button
+            onclick="submit()"
+            id="submit_button"
+            class="rating_btn --submit"
+            type="submit"
+          >
+            Submit
+          </button>
+        </section>
+        <!-- Rating state end -->
 
-        <div class="ratings">
-          <div class="one">1</div>
-          <div class="two">2</div>
-          <div class="three">3</div>
-          <div class="four">4</div>
-          <div class="five">5</div>
-        </div>
-
-        <button class="rating_btn" type="submit">Submit</button>
-      </section>
-      <!-- Rating state end -->
-
-      <section class="thank_you" display="none">
-        <img
-          src="./images/illustration-thank-you.svg"
-          alt="thank-you"
-          class="thank_you_image"
-        />
-        <div class="thank_you_rating">
-          You selected
-          <!-- Add rating here -->
-          out of 5
-        </div>
-
-        <h2 class="thank_you_heading">Thank you!</h2>
-
-        <p class="thank_you_description">
-          We appreciate you taking the time to give a rating. If you ever need
-          more support, don’t hesitate to get in touch!
-        </p>
-
-        <!-- Thank you state end -->
-      </section>
+        <section class="thank_you_card" id="thank_you_card">
+          <img
+            src="./images/illustration-thank-you.svg"
+            alt="thank-you"
+            class="thank_you_image"
+          />
+          <div class="thank_you_rating">
+            You selected
+            <span id="rating"></span>
+            out of 5
+          </div>
+          <h2 class="thank_you_heading">Thank you!</h2>
+          <p class="thank_you_description">
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don’t hesitate to get in touch!
+          </p>
+          <!-- Thank you state end -->
+        </section>
+      </div>
     </main>
+    <script type="text/javascript" src="./main.js"></script>
   </body>
 </html>

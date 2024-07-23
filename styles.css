@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --Orange: hsl(25, 97%, 53%);
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Overpass", sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  background-color: var(--Very-Dark-Blue);
+  display: grid;
+  place-items: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  padding: 1rem;
+  width: min(420px, 90%);
+}
+
+.card {
+  aspect-ratio: 1/1;
+  border-radius: 2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--Dark-Blue);
+}
+
+.rating_image {
+  box-shadow: 0 2px 1px hsl(213, 19%, 18%);
+  background-color: #29313c;
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 1rem;
+    aspect-ratio: 1/1;
+  }
+  margin-bottom: 20px;
+}
+
+.rating_heading {
+  font-weight: 700;
+}
+
+.rating_description {
+  color: var(--Light-Grey);
+  line-height: 1.5rem;
+  font-weight: 400;
+  margin: 1rem 0;
+}
+
+.ratings_btn {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.rating_btn {
+  color: var(--Light-Grey);
+  font: inherit;
+  font-weight: 700;
+  background-color: #29313c;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+}
+
+.rating_btn:hover {
+  background-color: var(--Orange);
+  color: var(--Very-Dark-Blue);
+}
+
+.active {
+  background-color: var(--White);
+  color: var(--Very-Dark-Blue);
+}
+
+.--submit {
+  background-color: var(--Orange);
+  color: var(--Very-Dark-Blue);
+  margin-top: 2rem;
+  text-transform: uppercase;
+  border-radius: 2rem;
+  width: 100%;
+  align-self: center;
+}
+
+.--submit:hover {
+  background-color: var(--White);
+}
+
+.thank_you_card {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.thank_you_image {
+  margin-top: 20px;
+  height: 100px;
+  width: 150px;
+}
+
+.thank_you_rating {
+  margin-top: 2rem;
+  background-color: #29313c;
+  padding: 0.5rem 1rem;
+
+  border-radius: 1rem;
+  font-weight: 400;
+  color: var(--Orange);
+}
+
+.thank_you_heading {
+  margin-top: 2rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.thank_you_description {
+  margin-top: 1rem;
+  color: var(--Light-Grey);
+  line-height: 1.5em;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
